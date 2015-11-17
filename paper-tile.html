@@ -71,13 +71,13 @@ Example:
       }
     </style>
     
-    <iron-image src="[[img]]" sizing="cover">
+    <iron-image src="[[img]]" sizing="cover" on-tap="_primaryActionTaped">
       <div id="content">
         <div id="text">
           <div id="firstLine">[[firstLine]]</div>
           <div id="secondLine">[[secondLine]]</div>
         </div>
-        <paper-icon-button icon="[[icon]]"></paper-icon-button>
+        <paper-icon-button icon="[[icon]]" on-tap="_secondaryActionTaped"></paper-icon-button>
       </div>
     </iron-image>
 
@@ -119,7 +119,17 @@ Example:
 
     ready: function() {
       this.$.content.style.height = this.firstLine ? ( this.secondLine ? '68px' : '48px') : 0;
-    }
+    },
+
+    _secondaryActionTaped: function(e) {
+      e.stopPropagation();
+      this.fire('tap-secondary-action');
+    },
+
+    _primaryActionTaped: function() {
+      this.fire('tap-primary-action');
+    },
+
 
   });
 
