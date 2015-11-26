@@ -7,3 +7,4 @@ see [material spec](https://www.google.com/design/spec/components/grid-lists.htm
 ## TODO
 
 - secondary-action-on-left attribute
+- use dom if for case where there is no content
