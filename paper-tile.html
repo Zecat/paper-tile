@@ -132,12 +132,12 @@ Example:
     },
 
     _primaryActionTaped: function() {
-      this.fire('tap-primary-action');
+      this.fire('primary-action');
     },
 
     _secondaryActionTaped: function(e) {
       e.stopPropagation();
-      this.fire('tap-secondary-action');
+      this.fire('secondary-action');
     },
 
     _updateContentHeight: function(firstLine, secondLine) {
