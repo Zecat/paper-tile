@@ -53,6 +53,7 @@ Example:
       #text {
         @apply(--layout-flex);
         padding: 16px;
+
       }
       :host[alternative-font-size] #firstLine, :host[alternative-font-size] #secondLine {
         font-size: 14px;
@@ -61,9 +62,11 @@ Example:
         font-weight: 500;
         padding-bottom: 4px;
         font-size: 16px;
+        @apply(--paper-font-common-nowrap);
       }
       #secondLine {
         font-size: 12px;
+        @apply(--paper-font-common-nowrap);
       }
       paper-icon-button {
         padding: 12px;
