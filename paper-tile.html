@@ -83,7 +83,9 @@ Example:
           <div id="firstLine">[[firstLine]]</div>
           <div id="secondLine">[[secondLine]]</div>
         </div>
-        <paper-icon-button icon="[[icon]]" on-tap="_secondaryActionTaped"></paper-icon-button>
+        <template is="dom-if" if="[[icon]]">
+          <paper-icon-button icon="[[icon]]" on-tap="_secondaryActionTaped"></paper-icon-button>
+        </template>
       </div>
     </iron-image>
 
@@ -104,6 +106,15 @@ Example:
         type: Boolean,
         value: false,
         reflectToAttribute: true
+      },
+
+      /**
+       * If set, provide a secondary action button 
+       * and bind this to <paper-icon-button>'s icon property.
+       */
+      icon: {
+        type: String,
+        value: ''
       },
 
       img: String,
