@@ -1,10 +1,10 @@
 {
   "name": "paper-tile",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "authors": [
-    "Anonymous <anonymous@example.com>"
+    "Zecat <jullienfelix@gamil.com>"
   ],
-  "description": "An element providing a solution to no problem in particular.",
+  "description": "Material tile element, use it in a grid list.",
   "keywords": [
     "web-component",
     "polymer",
