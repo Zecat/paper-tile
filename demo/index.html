@@ -16,20 +16,47 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="../paper-tile.html">
     <link rel="import" href="../../iron-icons/iron-icons.html">
+    <link rel="import" href="../../iron-flex-layout/classes/iron-flex-layout.html">
   </head>
   <body unresolved>
 
     <template is="dom-bind" id="scope">
 
-      <paper-tile
-        first-line="Title"
-        second-line="Another line"
-        footer-content
-        icon="icons:star-border"
-        img="https://c1.staticflickr.com/5/4003/4521514936_d6dc074074_b.jpg"
-        on-secondary-action="secondaryAction"
-        on-primary-action="primaryAction">
-        </paper-tile>
+      <style>
+        paper-tile {
+          margin: 2px;
+        }
+      </style>
+      
+      <div class="layout horizontal">
+        
+        <paper-tile
+          first-line="Title"
+          second-line="Another line"
+          footer-content
+          icon="icons:star-border"
+          img="https://c1.staticflickr.com/5/4003/4521514936_d6dc074074_b.jpg"
+          on-secondary-action="secondaryAction"
+          on-primary-action="primaryAction">
+          </paper-tile>
+
+        <paper-tile
+          first-line="Title"
+          footer-content
+          icon="icons:star-border"
+          img="https://c1.staticflickr.com/5/4003/4521514936_d6dc074074_b.jpg"
+          on-secondary-action="secondaryAction"
+          on-primary-action="primaryAction">
+          </paper-tile>
+
+        <paper-tile
+          footer-content
+          icon="icons:star-border"
+          img="https://c1.staticflickr.com/5/4003/4521514936_d6dc074074_b.jpg"
+          on-secondary-action="secondaryAction"
+          on-primary-action="primaryAction">
+          </paper-tile>
+      </div>
 
     </template>
 

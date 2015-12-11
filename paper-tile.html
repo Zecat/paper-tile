@@ -100,8 +100,11 @@ Example:
     is: 'paper-tile',
 
     properties: {
-      firstLine: String,
-      
+      firstLine:  {
+        type: String,
+        value: ''
+      },
+
       footerContent: {
         type: Boolean,
         value: false,
@@ -119,7 +122,10 @@ Example:
 
       img: String,
  
-      secondLine: String,
+      secondLine: {
+        type: String,
+        value: ''
+      },
 
       secondActionOnLeft: {
         type: Boolean,
@@ -135,7 +141,7 @@ Example:
     },
 
     observers: [
-      '_updateContentHeight(firstLine, secondLine)'
+      '_updateContentHeight(firstLine, secondLine, icon)'
     ],
 
     ready: function() {
@@ -151,8 +157,8 @@ Example:
       this.fire('secondary-action');
     },
 
-    _updateContentHeight: function(firstLine, secondLine) {
-      this.$.content.style.height = firstLine ? ( secondLine ? '68px' : '48px') : 0;
+    _updateContentHeight: function(firstLine, secondLine, icon) {
+      this.$.content.style.height = firstLine ? ( secondLine ? '68px' : '48px') : ( icon ? '0' : '48px' );
     },
 
   });
