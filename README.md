@@ -4,6 +4,16 @@
 
 see [material spec](https://www.google.com/design/spec/components/grid-lists.html#grid-lists-specs)
 
+## Demo & doc
+
+See the [component page](http://zecat.github.io/paper-tile) for more information.
+
+## Installation
+
+```
+bower install --save Zecat/paper-tile
+```
+
 ## TODO
 
 - secondary-action-on-left attribute
