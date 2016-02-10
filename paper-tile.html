@@ -76,14 +76,19 @@ Example:
       }
     </style>
     
-    <iron-image src="[[img]]" sizing="cover" on-tap="_primaryActionTaped">
+    <iron-image src="[[img]]" sizing="cover" on-tap="_primaryActionTaped"
+      preload="[[preload]]" fade="[[fade]]" alt="[[alt]]"
+      prevent-load="[[preventLoad]]" position="[[position]]"
+      loaded="{{loaded}}" loading="{{loading}}" error="{{error}}"
+      placeholder="[[placeholder]]">
       <div id="content">
         <div id="text">
           <div id="firstLine">[[firstLine]]</div>
           <div id="secondLine">[[secondLine]]</div>
         </div>
         <template is="dom-if" if="[[icon]]">
-          <paper-icon-button icon="[[icon]]" on-tap="_secondaryActionTaped"></paper-icon-button>
+          <paper-icon-button icon="[[icon]]" on-tap="_secondaryActionTaped">
+          </paper-icon-button>
         </template>
       </div>
     </iron-image>
@@ -119,8 +124,11 @@ Example:
         value: ''
       },
 
+      /**
+       * Bind this to the <iron-image>'s src property.
+       */
       img: String,
- 
+
       secondLine: {
         type: String,
         value: ''
@@ -134,6 +142,84 @@ Example:
       secondActionIcon: String,
 
       alternativeFontSize: {
+        type: Boolean,
+        value: false
+      },
+
+      /**
+       * Bind this to the <iron-image>'s placeholder property.
+       */
+      placeholder: {
+        type: String,
+        value: null,
+      },
+
+      /**
+       * Bind this to the <iron-image>'s preload property.
+       */
+      preload: {
+        type: Boolean,
+        value: false
+      },
+
+      /**
+       * Bind this to the <iron-image>'s fade property.
+       */
+      fade: {
+        type: Boolean,
+        value: false
+      },
+
+      /**
+       * Bind this to the <iron-image>'s alt property.
+       */
+      alt: {
+        type: String,
+        value: null
+      },
+
+      /**
+       * Bind this to the <iron-image>'s preventLoad property.
+       */
+      preventLoad: {
+        type: Boolean,
+        value: false,
+      },
+
+      /**
+       * Bind this to the <iron-image>'s position property.
+       */
+      position: {
+        type: String,
+        value: 'center'
+      },
+
+      /**
+       * Bind this to the <iron-image>'s loaded property,
+       * assumes this value is readyOnly.
+       */
+      loaded: {
+        notify: true,
+        type: Boolean,
+        value: false
+      },
+
+      /**
+       * Bind this to the <iron-image>'s loading property,
+       * assumes this value is readyOnly.
+       */
+      loading: {
+        notify: true,
+        type: Boolean,
+        value: false
+      },
+
+      /**
+       * Bind this to the <iron-image>'s error property,
+       * assumes this value is readyOnly.
+       */
+      error: {
+        notify: true,
         type: Boolean,
         value: false
       }
