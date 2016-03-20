@@ -55,7 +55,10 @@ Example:
       }
       #text {
         @apply(--layout-flex);
-        padding: 16px;
+        padding: 16px 0 16px 16px ;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       :host[alternative-font-size] #firstLine, :host[alternative-font-size] #secondLine {
         font-size: 14px;
