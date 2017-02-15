@@ -80,7 +80,7 @@ Example:
       }
     </style>
     
-    <iron-image src="[[img]]" sizing="cover" on-tap="_primaryActionTaped"
+    <iron-image src="[[img]]" sizing="[[sizing]]" on-tap="_primaryActionTaped"
       preload="[[preload]]" fade="[[fade]]" alt="[[alt]]"
       prevent-load="[[preventLoad]]" position="[[position]]"
       loaded="{{loaded}}" loading="{{loading}}" error="{{error}}"
@@ -126,6 +126,10 @@ Example:
       icon: {
         type: String,
         value: ''
+      },
+
+      sizing: {
+        type: String
       },
 
       /**
